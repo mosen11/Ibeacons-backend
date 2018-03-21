@@ -8,22 +8,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Cutomer")
+@Table(name = "Customer")
 public class Customer {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	public Long id;
+	private Long id;
+
+	@Column
+	private String customerName;
+
+	@Column
+	private String compoanyURL;
 
 	public Long getId() {
 		return id;
 	}
 
-	@Column
-	private String compoanyURL;
-
-	@Column
-	private String customerName;
 
 	public String getCustomerName() {
 		return customerName;

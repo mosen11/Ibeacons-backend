@@ -5,6 +5,8 @@ import nl.ibeacons.ibeacons.entity.Customer;
 import nl.ibeacons.ibeacons.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class CustomerService {
 
@@ -15,7 +17,7 @@ public class CustomerService {
 	}
 
 
-	public Customer getCustomerData(final Long customerId) {
-		return customerRepository.findOne(customerId);
+	public Optional<Customer> getCustomerData(final Long customerId) {
+		return Optional.of(customerRepository.findOne(customerId));
 	}
 }
