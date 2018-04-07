@@ -3,6 +3,7 @@ package nl.ibeacons.ibeacons.services;
 
 import nl.ibeacons.ibeacons.entity.Customer;
 import nl.ibeacons.ibeacons.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -11,7 +12,7 @@ import java.util.Optional;
 public class CustomerService {
 
 	private final CustomerRepository customerRepository;
-
+	@Autowired
 	public CustomerService(final CustomerRepository customerRepository) {
 		this.customerRepository = customerRepository;
 	}
