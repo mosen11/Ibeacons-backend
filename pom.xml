@@ -19,6 +19,8 @@
 	</parent>
 	<scm>
 		<developerConnection>scm:git:https://github.com/mosen11/Ibeacons-backend.git</developerConnection>
+		<connection>scm:git:https://github.com/mosen11/Ibeacons-backend.git</connection>
+		<url>https://github.com/mosen11/Ibeacons-backend.git</url>
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
