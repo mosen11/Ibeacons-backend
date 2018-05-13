@@ -19,6 +19,6 @@ public class CustomerService {
 
 
 	public Optional<Customer> getCustomerData(final Long customerId) {
-		return Optional.of(customerRepository.findOne(customerId));
+		return customerRepository.findById(customerId);
 	}
 }
