@@ -20,6 +20,7 @@ public class CustomerController {
 		this.customerService = customerService;
 	}
 
+
 	@GetMapping("/customerData/{customerId}" )
 	@ResponseBody
 	public Customer getCustomerData(@PathVariable Long customerId ) {

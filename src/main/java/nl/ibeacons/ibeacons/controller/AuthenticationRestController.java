@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping(value = "/login")
+//@RequestMapping(value = "/login")
 public class AuthenticationRestController {
 
     @Value("${jwt.header}")

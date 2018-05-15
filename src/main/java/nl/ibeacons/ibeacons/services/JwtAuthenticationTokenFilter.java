@@ -1,6 +1,7 @@
 package nl.ibeacons.ibeacons.services;
 
 import io.jsonwebtoken.ExpiredJwtException;
+import nl.ibeacons.ibeacons.security.JwtUserDetailsServiceImpl;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     private final Log log = LogFactory.getLog(JwtAuthenticationTokenFilter.class);
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    private JwtUserDetailsServiceImpl userDetailsService;
 
     @Autowired
     private JwtTokenUtil jwtTokenUtil;

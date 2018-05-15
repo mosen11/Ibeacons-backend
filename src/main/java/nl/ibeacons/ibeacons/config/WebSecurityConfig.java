@@ -23,10 +23,10 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
 
-@SuppressWarnings("SpringJavaAutowiringInspection")
+//@SuppressWarnings("SpringJavaAutowiringInspection")
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled=true)
+//@EnableGlobalMethodSecurity(prePostEnabled=true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -88,6 +88,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
+                .and()
+                .authorizeRequests()
+                .antMatchers("/auth/**").permitAll()
                 .antMatchers(
                         HttpMethod.GET,
                         "/",
@@ -96,10 +99,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/**/*.html",
                         "/**/*.css",
                         "/**/*.js"
-                )
-                .permitAll()
-                .antMatchers("/login/auth/**")
-                .permitAll()
+                ).permitAll()
                 .anyRequest().authenticated();
 
         // Custom JWT based security filter
